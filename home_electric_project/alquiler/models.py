@@ -17,6 +17,6 @@ class Usuario(models.Model):
     direccion = models.CharField(max_length=50)
     email = models.EmailField()
     tlfno = models.CharField(max_length=10)
-    cedula = models.IntegerField(max_length=10)
+    cedula = models.IntegerField()
     
     
