@@ -4,11 +4,7 @@ from django.db import models
 class Herramienta(models.Model):
     nombre = models.CharField(max_length=50)
     disponibilidad = models.BooleanField()
-    
-class Alquiler(models.Model):
-    inicio = models.DateField()
-    fin = models.DateField()
-    
+
 class Usuario(models.Model):
     primer_nombre = models.CharField(max_length=30)
     segundo_nombre = models.CharField(max_length=30)
@@ -19,4 +15,8 @@ class Usuario(models.Model):
     tlfno = models.CharField(max_length=10)
     cedula = models.IntegerField()
     
-    
+class Alquiler(models.Model):
+    inicio = models.DateField()
+    fin = models.DateField()
+    usuario= models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    herramienta= models.ForeignKey(Herramienta, on_delete=models.CASCADE)

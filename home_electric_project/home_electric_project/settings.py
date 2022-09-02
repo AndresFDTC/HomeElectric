@@ -76,15 +76,8 @@ WSGI_APPLICATION = 'home_electric_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_he',
-        'USER': 'root',  
-        'PASSWORD': 'georgie.1985',  
-        'HOST': '127.0.0.1',  
-        'PORT': '3306',  
-        'OPTIONS': {  
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" 
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db_he.sqlite3',
     }
 }
 
