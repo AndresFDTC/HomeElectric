@@ -19,13 +19,11 @@ class Usuario(models.Model):
     cedula = models.IntegerField()
     
     def __str__(self) -> str:
-        return self.primer_nombre, self.primer_apellido, self.direccion, self.email, self.tlfno, self.cedula
+        return self.primer_nombre
     
 class Alquiler(models.Model):
-    inicio = models.DateField()
-    fin = models.DateField()
+    inicio = models.DateField(default='2022-01-01')
+    fin = models.DateField(default='2022-01-01')
     usuario= models.ForeignKey(Usuario, on_delete=models.CASCADE)
     herramienta= models.ForeignKey(Herramienta, on_delete=models.CASCADE)
-    
-    #def __str__(self):
-    #    return f'{self.inicio}'
+
