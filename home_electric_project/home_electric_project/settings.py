@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'alquiler',
     'perfil',
     'tienda',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
