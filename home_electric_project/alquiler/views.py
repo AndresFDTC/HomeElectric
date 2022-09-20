@@ -14,3 +14,21 @@ class ListTool(generics.ListAPIView):
     queryset = Herramienta.objects.all()
     permission_classes = (AllowAny,)
     serializer_class = ToolSerializer
+    
+class RetrieveTool(generics.RetrieveAPIView):
+    queryset = Herramienta.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = ToolSerializer
+    lookup_field = 'pk'
+
+class UpdateTool(generics.UpdateAPIView):
+    queryset = Herramienta.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = ToolSerializer
+    lookup_field = 'pk'
+    
+class DeleteTool(generics.DestroyAPIView):
+    queryset = Herramienta.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = ToolSerializer
+    lookup_field = 'pk'
