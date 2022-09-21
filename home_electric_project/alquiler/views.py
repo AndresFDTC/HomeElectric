@@ -1,34 +1,74 @@
-from .serializers import ToolSerializer
+from .serializers import ToolSerializer, RentSerializer
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework import generics
 from django.contrib.auth.models import User
-from .models import Herramienta
+from .models import Herramienta, Alquiler
 
-# Create your views here.
+# CRUD herramientas
+# Create Herramienta:
 class RegisterTool(generics.CreateAPIView):
     queryset = Herramienta.objects.all()
     permission_classes = (AllowAny,)
     serializer_class = ToolSerializer
-    
+
+# Lista de Herramientas:
 class ListTool(generics.ListAPIView):
     queryset = Herramienta.objects.all()
     permission_classes = (AllowAny,)
     serializer_class = ToolSerializer
-    
+
+# Read Herramienta:
 class RetrieveTool(generics.RetrieveAPIView):
     queryset = Herramienta.objects.all()
     permission_classes = (AllowAny,)
     serializer_class = ToolSerializer
     lookup_field = 'pk'
 
+# Update Herramienta:
 class UpdateTool(generics.UpdateAPIView):
     queryset = Herramienta.objects.all()
     permission_classes = (AllowAny,)
     serializer_class = ToolSerializer
     lookup_field = 'pk'
-    
+
+# Delete Herramienta:
 class DeleteTool(generics.DestroyAPIView):
     queryset = Herramienta.objects.all()
     permission_classes = (AllowAny,)
     serializer_class = ToolSerializer
+    lookup_field = 'pk'
+
+# --------------------------------------------------
+# CRUD de alquiler
+# Create alquiler:
+class RegisterRent(generics.CreateAPIView):
+    queryset = Alquiler.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = RentSerializer
+
+# Lista de alquileres:
+class ListRent(generics.ListAPIView):
+    queryset = Alquiler.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = RentSerializer
+
+# Read alquiler:
+class RetrieveRent(generics.RetrieveAPIView):
+    queryset = Alquiler.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = RentSerializer
+    lookup_field = 'pk'
+
+# Update alquiler:
+class UpdateRent(generics.UpdateAPIView):
+    queryset = Alquiler.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = RentSerializer
+    lookup_field = 'pk'
+
+# Delete alquiler:
+class DeleteRent(generics.DestroyAPIView):
+    queryset = Alquiler.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = RentSerializer
     lookup_field = 'pk'
