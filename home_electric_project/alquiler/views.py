@@ -51,6 +51,13 @@ class ListRent(generics.ListAPIView):
     queryset = Alquiler.objects.all()
     permission_classes = (AllowAny,)
     serializer_class = RentSerializer
+    def get_queryset(self):
+        """
+        This view should return a list of all the purchases
+        for the currently authenticated user.
+        """
+        user = self.request.user
+        return Alquiler.objects.filter(usuario=user)
 
 # Read alquiler:
 class RetrieveRent(generics.RetrieveAPIView):
