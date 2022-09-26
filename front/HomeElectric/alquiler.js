@@ -3,7 +3,7 @@ $(document).ready(function() {
         var herramienta = $("#herramienta").val()
         var inicio = $("#inicio").val();
         var fin = $("#fin").val();
-        var usuario = "8";
+        var usuario = "6";
         
         const url = "http://localhost:8000/alquiler/reg_rent/"
 
