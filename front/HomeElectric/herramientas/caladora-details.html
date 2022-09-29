@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - Squadfree Bootstrap Template</title>
+  <title>Detalles Herramienta</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -33,51 +33,39 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
+  <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1 class="text-light"><a href="index.html"><span>Squadfree</span></a></h1>
+        <a href="index.html"><img src="assets/img/Logo.png" alt=""><h1 class="text-light"></h1></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="tienda.html">Tienda</a></li>
+          <li><a class="nav-link scrollto" href="#">Reservas</a></li>
+          <li><a class="nav-link scrollto" href="#perfil">Perfil</a></li>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary" type="submit">Buscar</button>
+          </form>
+          <li><a class="nav-link scrollto" href="login.html">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
   <main id="main">
 
@@ -86,23 +74,64 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
+          <h2>Caladora</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Inner Page</li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li>Caladora</li>
           </ol>
         </div>
-
       </div>
-    </section><!-- End Breadcrumbs Section -->
+    </section><!-- Breadcrumbs Section -->
 
-    <section class="inner-page">
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
       <div class="container">
-        <p>
-          Example inner page template
-        </p>
-      </div>
-    </section>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/herramientas/Caladora.png" alt="">
+                </div>
+
+                <!-- <div class="swiper-slide">
+                  <img src="assets/img/herramientas/Caladora.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/herramientas/CepilloElectrico.png" alt="">
+                </div> -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="portfolio-info">
+              <h3>Características Caladora</h3>
+              <ul>
+                <li><strong>Category</strong>: Electric</li>
+                <li><strong>Marca</strong>: Oster</li>
+                <li><strong>Fecha</strong>: 01 March, 2020</li>
+                <li><strong>Voltaje</strong>: 110 V</li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Descripción</h2>
+              <p>
+                También conocida como sierra de vaivén, la caladora sirve para hacer cortes rectos, curvos o biselados en diferentes materiales como madera blanda, chapado, aglomerado, melamina, cartón, cuero, corcho. Dependiendo del material a cortar necesita una hoja de corte específica.
+              </p>
+            </div>
+            
+            <button class="btn btn-primary mt-5" type="submit"><a class="nav-link scrollto" href="alquiler.html">Reservar</a></button>
+
+          </div>
+    </section><!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
 
@@ -114,13 +143,13 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
-              <h3>Squadfree</h3>
+              <h3>HomeElectric</h3>
               <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                Dirección <br>
+                Bogotá, D.C.<br><br>
+                <strong>Celular:</strong> +1 5589 55488 55<br>
+                <strong>Correo:</strong> info@example.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -133,29 +162,29 @@
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Navegación</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Tienda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Perfil</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terminos y condiciones</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Política De Privacidad</a></li>
             </ul>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Nuestros Servicios y Aliados</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Alquiler de herramientas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Acompañamiento</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Seguimiento</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Conexiones</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Diseño de interiores</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
+            <h4>Blog</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
@@ -169,17 +198,18 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Squadfree</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Luisa Londoño, Samuel Corredor, Jorge Mario Mendoza, Jorge Andrés Hoyos, Andrés Duque</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="equipo1_g45.html">Grupo 1 - G45</a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -195,6 +225,8 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  !-- Data Picker -->
+  
 </body>
 
 </html>

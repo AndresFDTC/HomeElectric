@@ -6,12 +6,6 @@ $(document).ready(function() {
         var mail = $("#email").val();
         var nom = $("#first_name").val();
         var ape = $("#last_name").val();
-        console.log(nomUs);
-        console.log(pass1);
-        console.log(pass2);
-        console.log(mail);
-        console.log(nom);
-        console.log(ape);
 
         const url = "http://localhost:8000/perfil/registro/"
 
@@ -27,6 +21,7 @@ $(document).ready(function() {
         var fetchData = {
             method: 'POST',
             body: JSON.stringify(data),
+            
             headers: {
                 'Accept': 'application/json, text/plain',
                 'Content-Type': 'application/json'
