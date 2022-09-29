@@ -24,5 +24,19 @@ $(document).ready(function() {
         .then(response => response.json()) 
         .then(json => console.log(json))
         .catch(err => console.log(err))
+
+        fetch(`http://localhost:8000/perfil/username/${nomUs}`)
+        .then(response => response.json()) 
+        .then(json => {
+            //console.log(json)
+            var user_id = json["id"];
+            //console.log(`El id del usuario es ${user_id}`)
+            var user_name =json["first_name"];
+            //console.log(`El nombre del usuario es ${user_name}`)
+            window.localStorage.setItem('name', user_name)
+            window.localStorage.setItem("user_id", user_id)
+            window.location.href ="tienda.html";
+        })
+        .catch(err => console.log(err))
     })
 })

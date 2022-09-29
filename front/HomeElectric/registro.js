@@ -30,7 +30,10 @@ $(document).ready(function() {
 
         fetch(url, fetchData)
         .then(response => response.json()) 
-        .then(json => console.log(json))
+        .then(json => {
+            alert('¡Registro de usuario exitoso!')
+            window.location.href ="login.html"
+        })
         .catch(err => console.log(err))
     })
 })

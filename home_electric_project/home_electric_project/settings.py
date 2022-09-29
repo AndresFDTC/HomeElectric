@@ -83,12 +83,8 @@ WSGI_APPLICATION = 'home_electric_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'he',
-        'USER': 'postgres',
-        'PASSWORD': '123456789',
-        'PORT': '5432',
-        'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db_he.sqlite3'
     }
 }
 

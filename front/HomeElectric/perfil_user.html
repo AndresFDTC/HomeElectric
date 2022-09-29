@@ -49,6 +49,7 @@
                     <button class="btn btn-primary" type="submit">Buscar</button>
                 </form>
                 <li><a class="nav-link scrollto" href="login.html">Login</a></li>
+                <li><a class="nav-link scrollto" id="logged"><i class="bi bi-person"></i></a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -71,53 +72,11 @@
                         <hr style="color: rgb(61, 55, 55);" class="text-center m-5">
                         <div class="row mt-3">
                             <h2><strong>Reservas Realizadas</strong></h2>
-                            <div class="col-4">
-                                <div class="card">
-                                    <img src="assets/img/herramientas/Caladora.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <button type="button" class="btn btn-success btn-sm">Editar</button>
-                                                
-                                            </div>
-                                            <div class="col-6">
-                                                <button style="margin-left: -10px;" type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-grid gap-2 col-4 mx-auto">
-                                <div class="card">
-                                    <img src="assets/img/herramientas/Acolilladora.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <button type="button" class="btn btn-success btn-sm">Editar</button>
-                                                
-                                            </div>
-                                            <div class="col-6">
-                                                <button style="margin-left: -10px;" type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-grid gap-2 col-4 mx-auto">
-                                <div class="card">
-                                    <img src="assets/img/herramientas/Hiftolavadora.png" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <button type="button" class="btn btn-success btn-sm">Editar</button>
-                                                
-                                            </div>
-                                            <div class="col-6">
-                                                <button style="margin-left: -10px;" type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="">
+                                <ul id="list-reserva" class="text-start list-group list-group-flush">
+                                    <li class="list-group-item">Producto 1</li>
+                                    <li class="list-group-item">Producto 2</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -211,6 +170,9 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+        <script src="saludoLogin.js"></script>
+        <script src="perfil_user.js"></script>
+        
     </body>
 
 </html>
