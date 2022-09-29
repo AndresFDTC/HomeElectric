@@ -80,3 +80,12 @@ class DeleteRent(generics.DestroyAPIView):
     permission_classes = (AllowAny,)
     serializer_class = RentSerializer
     lookup_field = 'pk'
+    
+# Rents by user
+class RentsByUser(generics.ListAPIView):
+    def get_queryset(self):
+        usuario_id = self.kwargs['usuario_id']
+        return Alquiler.objects.filter(usuario_id=usuario_id)
+    permission_classes = (AllowAny,)
+    serializer_class = RentSerializer
+    lookup_field = 'usuario_id'
