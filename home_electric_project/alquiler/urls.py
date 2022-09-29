@@ -12,4 +12,5 @@ urlpatterns = [
     path('retrieve_rent/<int:pk>', RetrieveRent.as_view(), name='retrieve_rent'),
     path('update_rent/<int:pk>', UpdateRent.as_view(), name='update_rent'),
     path('delete_rent/<int:pk>', DeleteRent.as_view(), name='delete_rent'),
+    path('rents_user/<int:usuario_id>', RentsByUser.as_view(), name='rents_user'),
 ]
