@@ -20,11 +20,13 @@ $(document).ready(function() {
                 }
         }
 
+        // Solicitud para iniciar sesión
         fetch(url, fetchData)
         .then(response => response.json()) 
         .then(json => console.log(json))
         .catch(err => console.log(err))
 
+        // Solicitud para obtener el id y nombre del usuario para almacenarlo en el localstorage
         fetch(`http://localhost:8000/perfil/username/${nomUs}`)
         .then(response => response.json()) 
         .then(json => {

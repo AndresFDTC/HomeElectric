@@ -32,7 +32,7 @@ $(document).ready(function() {
         .then(response => response.json()) 
         .then(json => {
             alert('¡Registro de usuario exitoso!')
-            window.location.href ="login.html"
+            window.location.href ="login.html" //Pendiente por revisar url
         })
         .catch(err => console.log(err))
     })
