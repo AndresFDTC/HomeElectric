@@ -1,28 +1,31 @@
 $(document).ready(function() {
+    // Solicitud de datos p
+    var user_id = window.localStorage.getItem('user_id');
+    var url1 = "http://localhost:8000/perfil/info_user/" + user_id
+    fetch(url1)
+        .then(response => response.json())
+        .then(json => {
+            var nombre = json["first_name"];
+            var usuario = json["username"];
+            var correo = json["email"];
 
-    // nombre del ususario y cerrar sesión
-    var userSession = window.localStorage.getItem('name')
-    if (userSession) {
-        //Crea el saludo al usuario con nombre propio
-        var p = document.createElement("p");
-        p.innerHTML = `Hola ${userSession}`;
-        document.getElementById("logged").appendChild(p)
+            var nombre_perfil = document.createElement("H2");
+            nombre_perfil.innerHTML = nombre;
+            document.getElementById("nombre_perfil").appendChild(nombre_perfil)
 
-        // Agrega el botón para cerrar la sesión
-        let btn = document.createElement("button");
-        btn.innerHTML = "Cerrar sesión";
-        btn.class = "btn btn-secondary"
-        btn.onclick = function () {
-            window.localStorage.clear();
-            window.location.href ="index.html";
-        }
-        document.getElementById("logged").appendChild(btn);
-    }
+            var usuario_perfil = document.createElement("H5");
+            usuario_perfil.innerHTML = usuario;
+            document.getElementById("usuario_perfil").appendChild(usuario_perfil)
 
+            var correo_perfil = document.createElement("H5");
+            correo_perfil.innerHTML = correo;
+            document.getElementById("correo_perfil").appendChild(correo_perfil)
+        })
+        .catch(err => console.log(err))
 
-    var user_id = "4";
-    const url = `http://localhost:8000/alquiler/rents_user/${user_id}`
-    fetch(url)
+    // Solicitud a la api que devuelve todos los alquileres del usuario
+    var url2 = `http://localhost:8000/alquiler/rents_user/${user_id}`
+    fetch(url2)
         .then(response => response.json()) 
         .then(json => {
             console.log(json)
@@ -34,10 +37,14 @@ $(document).ready(function() {
                 let usuario = window.localStorage.getItem('user_id');
                 console.log(rent_id, inicio, fin, herramienta, usuario);
 
-                let rent = document.createElement("li");
-                rent.innerHTML = herramienta
-                rent.class = "list-group-item"
-                document.getElementById("list_reserva").appendChild(rent)
+                let rent = document.createElement("a");
+                rent.innerHTML = inicio
+                rent.className = "list-group-item";
+                rent.href = `alquilerUpdate.html?id=`+ rent_id
+                document.getElementById("rent").appendChild(rent)
+
+                let linebrake = document.createElement("br");
+                document.getElementById("rent").appendChild(linebrake);
             }
         })
         .catch(err => console.log(err))

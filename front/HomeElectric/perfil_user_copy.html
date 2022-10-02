@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Check Out</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <title>Perfil Usuario</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -31,117 +31,82 @@
     </head>
     <body>
         <!-- ======= Header ======= -->
-        <header id="header" class="fixed-top mb-5">
+        <header id="header" class="fixed-top">
             <div class="container d-flex align-items-center justify-content-between">
 
-                <div class="logo">
-                    <a href="index.html"><img src="assets/img/Logo.png" alt=""><h1 class="text-light"></h1></a></h1>
-                    <!-- Uncomment below if you prefer to use an image logo -->
-                    <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-                </div>
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/Logo.png" alt=""><h1 class="text-light"></h1></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
 
-                <nav id="navbar" class="navbar">
-                    <ul>
-                        <li><a class="nav-link scrollto" href="index.html"> Home </a></li>
-                        <li><a class="nav-link scrollto" href="tienda.html"> Tienda </a></li>
-                        <li><a class="nav-link scrollto" href="alquiler.html"> Reservas </a></li>
-                        <li><a class="nav-link scrollto" href="perfil_user.html"> Perfil </a></li>
-                        <li id="btn_login"></li>
-                        <li style="margin-right: -12px;"><a class="text-white" id="saludo"><i class="bi bi-person"></i></a></li>
-                        <li style="margin-left: -12px;"><strong><a style="color: #2e3746; text-decoration: underline;" id="cerrar"></a></strong></li>
-                        <li><a class="nav-link scrollto" id="logged"><i class="bi bi-person"></i></a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav><!-- .navbar -->
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="index.html"> Home </a></li>
+                    <li><a class="nav-link scrollto" href="tienda.html"> Tienda </a></li>
+                    <li><a class="nav-link scrollto" href="alquiler.html"> Reservas </a></li>
+                    <li><a class="nav-link scrollto active" href="perfil_user.html"> Perfil </a></li>
+                    <li id="btn_login"></li>
+                    <li style="margin-right: -12px;"><a class="text-white" id="saludo"><i class="bi bi-person"></i></a></li>
+                    <li style="margin-left: -12px;"><strong><a style="color: #2e3746; text-decoration: underline;" id="cerrar"></a></strong></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+
             </div>
         </header>
         <!-- End Header -->
-    <main class="mt-5">
-        <div class="container p-5">
-            <div class="row mt-5 mb-5">
-                <div class="col-6 mt-5">
-                    <h3 class="text-center mb-4 mt-4">Formulario De Compra</h3>
-                    <form action="">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="form-outline mb-3">
-                                    <input type="text" id="registerFirstName" class="form-control" />
-                                    <label class="form-label" for="registerName">Nombres</label>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-outline mb-3">
-                                    <input type="text" id="" class="form-control" />
-                                    <label class="form-label" for="">Apellidos</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-outline mb-3">
-                            <input type="text" id="" class="form-control" />
-                            <label class="form-label" for="">Dirección</label>
-                        </div>
-                        <div class="form-outline mb-3">
-                            <input type="number" id="" class="form-control" />
-                            <label class="form-label" for="">Celular</label>
-                        </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="form-outline mb-3">
-                                    <input type="text" id="" class="form-control" />
-                                    <label class="form-label" for="">Ciudad</label>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="form-outline mb-3">
-                                    <input type="text" id="" class="form-control" />
-                                    <label class="form-label" for="">Barrio</label>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="form-outline mb-3">
-                                    <input type="number" id="" class="form-control" />
-                                    <label class="form-label" for="">Código Postal</label>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-6 mt-5 align-content-center">
-                    <div class="card mt-5">
-                        <div style="background-color: grey;" class="p-3">
-                            <h5 class="text-center text-white">Detalles de tu orden</h5>
-                        </div>
-                        
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h5 class="card-title">Productos</h5>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Producto 1</li>
-                                        <li class="list-group-item">Producto 2</li>
-                                        <li class="list-group-item">....</li>
-                                    </ul>
-                                </div>
-                                <div class="col-6">
-                                    <h5 class="card-title">Total</h5>
-                                    <h6 class="text-end p-5">$0000</h6>
-                                </div>
-                            </div>
-                        </div>
+        <main style="margin-top: 100px;">
+            <div class="container mt-5">
+                <div class="row m-5">
+                    <div class="col-5 align-items-center ml-5">
+                        <img src="assets/img/user.png" width="220px" height="220px" alt="" sizes="" srcset="">
                     </div>
-                </div>
-                <div class="text-end">
-                    <h6 class="text-end">Métodos De Pago</h6>
-                    <a href="#"><img src="assets/img/iconoPayPal.png" width="70px" height="50px" alt=""></a>
-                    <a href="#"><img src="assets/img/iconoBilletes.png" width="70px" height="50px" alt=""></a>
-                    <div class="text-end">
-                        <button class="btn btn-success mt-3" type="submit">Reservar</button>
+                    <div class="col-7">
+                        <h3 class="text-uppercase text-center mt-3 mb-3">Mi perfil</h3>
+                        <form action="#myform">
+
+                            <div class="form-outline mb-4">
+                                <input type="text" id="username" class="form-control form-control-lg" />
+                                <label class="form-label">Nombre de Usuario</label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="email" id="email" class="form-control form-control-lg" />
+                                <label class="form-label">Email</label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="text" id="first_name" class="form-control form-control-lg" />
+                                <label class="form-label">Primer Nombre</label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="text" id="last_name" class="form-control form-control-lg" />
+                                <label class="form-label">Primer Apellido</label>
+                            </div>
+
+                        </form>
+
+                        <div class="d-flex justify-content-center">
+                            <button type="submit"
+                            class="btn btn-warning btn-block btn-lg gradient-custom-4 text-body" id="update_user" style="margin:5px;">Editar perfil</button>
+                        </div>
+
+                        <div class="row mt-3">
+                            <h2><strong>Reservas Realizadas</strong></h2>
+                            <div class="">
+                                <ul id="rent" class="text-start list-group list-group-flush">
+                                    <li class="list-group-item"></li>
+                                    <li class="list-group-item"></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-        </div>
-    </main>
+        </main>
         <!-- ======= Footer ======= -->
         <footer id="footer">
             <div class="footer-top">
@@ -230,6 +195,8 @@
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
         <script src="saludoLogin.js"></script>
+        <script src="perfil_user_copy.js"></script>
+        
     </body>
 
 </html>

@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
     <title>Perfil Usuario</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -40,16 +42,13 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-                <li><a class="nav-link scrollto" href="tienda.html">Tienda</a></li>
-                <li><a class="nav-link scrollto active" href="alquiler.html">Reservas</a></li>
-                <li><a class="nav-link scrollto" href="perfil_user.html">Perfil</a></li>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-primary" type="submit">Buscar</button>
-                </form>
-                <li><a class="nav-link scrollto" href="login.html">Login</a></li>
-                <li><a class="nav-link scrollto" id="logged"><i class="bi bi-person"></i></a></li>
+                    <li><a class="nav-link scrollto" href="index.html"> Home </a></li>
+                    <li><a class="nav-link scrollto" href="tienda.html"> Tienda </a></li>
+                    <li><a class="nav-link scrollto" href="alquiler.html"> Reservas </a></li>
+                    <li><a class="nav-link scrollto active" href="perfil_user.html"> Perfil </a></li>
+                    <li id="btn_login"></li>
+                    <li style="margin-right: -12px;"><a class="text-white" id="saludo"><i class="bi bi-person"></i></a></li>
+                    <li style="margin-left: -12px;"><strong><a style="color: #2e3746; text-decoration: underline;" id="cerrar"></a></strong></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -63,20 +62,17 @@
                     <div class="col-5 align-items-center ml-5">
                         <img src="assets/img/user.png" width="220px" height="220px" alt="" sizes="" srcset="">
                     </div>
-                    <div class="col-7">
-                        <H2>Nombre Usuario / </H2><h2> User</h2> <br>
-                        <h5>Correo: {{email}}</h5>
-                        <h5>Celular: {{cellphone}}</h5>
-                        <h5>Dirección: {{address}}</h5>
-                        <button type="button" class="btn btn-link bi-text-right"><small> Editar </small></button>
+                    <div class="col-7 mt-5">
+                        <H2 id="nombre_perfil">Nombre: </H2>
+                        <h5 id="usuario_perfil">Nombre de usuario:</h5>
+                        <h5 id="correo_perfil">Correo: </h5>
+                        <button type="button" class="btn btn-link bi-text-right"><a href="perfil_user_copy.html">Editar</a></button>
                         <hr style="color: rgb(61, 55, 55);" class="text-center m-5">
+
                         <div class="row mt-3">
                             <h2><strong>Reservas Realizadas</strong></h2>
                             <div class="">
-                                <ul id="list-reserva" class="text-start list-group list-group-flush">
-                                    <li class="list-group-item">Producto 1</li>
-                                    <li class="list-group-item">Producto 2</li>
-                                </ul>
+                                <ul id="rent" class="text-start list-group list-group-flush"></ul>
                             </div>
                         </div>
                     </div>

@@ -1,29 +1,11 @@
 $(document).ready(function() {
-    var userSession = window.localStorage.getItem('name')
-    if (userSession) {
-        //Crea el saludo al usuario con nombre propio
-        var p = document.createElement("p");
-        p.innerHTML = `Hola ${userSession}`;
-        document.getElementById("logged").appendChild(p)
-
-        // Agrega el botón para cerrar la sesión
-        let btn = document.createElement("button");
-        btn.innerHTML = "Cerrar sesión";
-        btn.class = "btn btn-secondary"
-        btn.onclick = function () {
-            window.localStorage.clear();
-            window.location.href ="#"; // Dirección del home
-        }
-        document.getElementById("logged").appendChild(btn);
-    }
-
     // Solicitud para obtener el id_herramienta a partir del nombre
 
     var id_tool = ""
     $("#herramienta").change( function(e) {
         var nomHerramienta = $("#herramienta").val()
         console.log(nomHerramienta);
-        var url1 = `http://localhost:8000/alquiler/tool_name/${nomHerramienta}`
+        var url1 = "http://localhost:8000/alquiler/tool_name/"+nomHerramienta
 
         fetch(url1)
         .then(response => response.json()) 
@@ -70,7 +52,7 @@ $(document).ready(function() {
                 console.log(json)
                 console.log("Registro exitoso")
                 var rent_id = json["id"];
-                //window.location.href ="confirmacion.html?rent_id="+ rent_id;
+                window.location.href ="confirmacion.html?rent_id="+ rent_id;
                 alert("Alquiler registrado exitosamente")
             })
             .catch(err => console.log(err))

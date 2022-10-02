@@ -9,6 +9,8 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -49,17 +51,14 @@
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-            <li><a class="nav-link scrollto" href="tienda.html">Tienda</a></li>
-            <li><a class="nav-link scrollto active" href="alquiler.html">Reservas</a></li>
-                <li><a class="nav-link scrollto" href="perfil_user.html">Perfil</a></li>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-primary" type="submit">Buscar</button>
-            </form>
-            <li><a class="nav-link scrollto" href="login.html">Login</a></li>
-            <li><a class="nav-link scrollto" id="logged"><i class="bi bi-person" width="30" height="30"></i></a></li>
-          </ul>
+            <li><a class="nav-link scrollto active" href="index.html"> Home </a></li>
+            <li><a class="nav-link scrollto" href="tienda.html"> Tienda </a></li>
+            <li><a class="nav-link scrollto" href="alquiler.html"> Reservas </a></li>
+            <li><a class="nav-link scrollto" href="perfil_user.html"> Perfil </a></li>
+            <li id="btn_login"></li>
+            <li style="margin-right: -12px;"><a class="text-white" id="saludo"><i class="bi bi-person"></i></a></li>
+            <li style="margin-left: -12px;"><strong><a style="color: #2e3746; text-decoration: underline;" id="cerrar"></a></strong></li>
+        </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
 
