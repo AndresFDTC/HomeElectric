@@ -23,6 +23,13 @@ class RetrieveTool(generics.RetrieveAPIView):
     permission_classes = (AllowAny,)
     serializer_class = ToolSerializer
     lookup_field = 'pk'
+    
+# Read Herramienta para el menú desplegable:
+class RetrieveToolForMenu(generics.RetrieveAPIView):
+    queryset = Herramienta.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = ToolSerializer
+    lookup_field = 'nombre'
 
 # Update Herramienta:
 class UpdateTool(generics.UpdateAPIView):
