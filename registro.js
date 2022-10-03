@@ -7,7 +7,7 @@ $(document).ready(function() {
         var nom = $("#first_name").val();
         var ape = $("#last_name").val();
 
-        const url = "https://andresfdtc.github.io/HomeElectric/home_electric_project/perfil/registro/"
+        const url = "https://andresfdtc.github.io/HomeElectric/perfil/registro/"
 
         var data = {
             "username": nomUs,
