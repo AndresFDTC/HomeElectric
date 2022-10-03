@@ -10,15 +10,18 @@ $(document).ready(function() {
             var correo = json["email"];
 
             var nombre_perfil = document.createElement("H2");
-            nombre_perfil.innerHTML = nombre;
+            nombre_perfil.innerHTML = "- "+ nombre;
+            nombre_perfil.className = "fw-bold"
             document.getElementById("nombre_perfil").appendChild(nombre_perfil)
 
             var usuario_perfil = document.createElement("H5");
-            usuario_perfil.innerHTML = usuario;
+            usuario_perfil.innerHTML = "- "+ usuario;
+            usuario_perfil.className = "fw-bold"
             document.getElementById("usuario_perfil").appendChild(usuario_perfil)
 
             var correo_perfil = document.createElement("H5");
-            correo_perfil.innerHTML = correo;
+            correo_perfil.innerHTML = "- "+ correo;
+            correo_perfil.className = "fw-bold"
             document.getElementById("correo_perfil").appendChild(correo_perfil)
         })
         .catch(err => console.log(err))

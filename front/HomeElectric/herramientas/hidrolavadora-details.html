@@ -50,15 +50,13 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="../index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="../tienda.html">Tienda</a></li>
-          <li><a class="nav-link scrollto" href="../alquiler.html">Reservas</a></li>
-          <li><a class="nav-link scrollto" href="../perfil_user.html">Perfil</a></li>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-primary" type="submit">Buscar</button>
-          </form>
-          <li><a class="nav-link scrollto" href="../login.html">Login</a></li>
+          <li><a class="nav-link scrollto" href="../index.html"> Home </a></li>
+          <li><a class="nav-link scrollto active" href="../tienda.html"> Tienda </a></li>
+          <li><a class="nav-link scrollto" href="../alquiler.html"> Reservas </a></li>
+          <li><a class="nav-link scrollto" href="../perfil_user.html"> Perfil </a></li>
+          <li id="btn_login"></li>
+          <li style="margin-right: -12px;"><a class="text-white" id="saludo"><i style="font-size: 26px;" class="bi bi-person"></i></a></li>
+          <li style="margin-left: -12px;"><strong><a style="color: #2e3746; text-decoration: underline;" id="cerrar"></a></strong></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -224,7 +222,8 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../saludoLoginHerramienta.js"></script>
 
   !-- Data Picker -->
   
