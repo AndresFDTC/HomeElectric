@@ -5,7 +5,7 @@ $(document).ready(function() {
     $("#herramienta").change( function(e) {
         var nomHerramienta = $("#herramienta").val()
         console.log(nomHerramienta);
-        var url1 = "https://andresfdtc.github.io/HomeElectric/alquiler/tool_name/"+nomHerramienta
+        var url1 = "https://andresfdtc.github.io/HomeElectric/home_electric_project/alquiler/tool_name/"+nomHerramienta
 
         fetch(url1)
         .then(response => response.json()) 
@@ -28,7 +28,7 @@ $(document).ready(function() {
             var fin = $("#fin").val();
             var usuario = window.localStorage.getItem("user_id");
             
-            const url2 = "https://andresfdtc.github.io/HomeElectric/alquiler/reg_rent/"
+            const url2 = "https://andresfdtc.github.io/HomeElectric/home_electric_project/alquiler/reg_rent/"
 
             var data = {
                 "inicio": inicio,

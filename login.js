@@ -6,7 +6,7 @@ $(document).ready(function() {
         console.log(nomUs);
         console.log("hola");
         
-        const url = "https://andresfdtc.github.io/HomeElectric/perfil/login/"
+        const url = "https://andresfdtc.github.io/HomeElectric/home_electric_project/perfil/login/"
 
         var data = {
             "username": nomUs,
@@ -27,7 +27,7 @@ $(document).ready(function() {
         .then(json => {
             console.log(json)
             // Solicitud para obtener el id y nombre del usuario para almacenarlo en el localstorage
-            fetch(`https://andresfdtc.github.io/HomeElectric/perfil/username/${nomUs}`)
+            fetch(`https://andresfdtc.github.io/HomeElectric/home_electric_project/perfil/username/${nomUs}`)
             .then(response => response.json()) 
             .then(json => {
                 console.log(json)

@@ -23,14 +23,14 @@ $(document).ready(function() {
     var urlViene = window.location.search.substring(1);
     console.log(urlViene);
     var rent_id = urlViene.slice(3);
-    const url = `https://andresfdtc.github.io/HomeElectric/alquiler/retrieve_rent/${rent_id}`
+    const url = `https://andresfdtc.github.io/HomeElectric/home_electric_project/alquiler/retrieve_rent/${rent_id}`
         fetch(url)
             .then(response => response.json()) 
             .then(json => {
                 console.log(json)
                 console.log(json["herramienta"])
                 id_tool = json["herramienta"]
-                fetch("https://andresfdtc.github.io/HomeElectric/alquiler/retrieve_tool/"+id_tool)
+                fetch("https://andresfdtc.github.io/HomeElectric/home_electric_project/alquiler/retrieve_tool/"+id_tool)
                     .then(response => response.json())
                     .then(json => {
                         nomTool = json["nombre"]
@@ -47,7 +47,7 @@ $(document).ready(function() {
     $("#herramienta").change( function() {
         var nomHerramienta = $("#herramienta").val()
         console.log(nomHerramienta);
-        var url1 = `https://andresfdtc.github.io/HomeElectric/alquiler/tool_name/${nomHerramienta}`
+        var url1 = `https://andresfdtc.github.io/HomeElectric/home_electric_project/alquiler/tool_name/${nomHerramienta}`
 
         fetch(url1)
         .then(response => response.json()) 
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
     // Solicitud que actualiza los datos del alquiler
     $("#update").click(function(){
-        const url2 = `https://andresfdtc.github.io/HomeElectric/alquiler/update_rent/${rent_id}`
+        const url2 = `https://andresfdtc.github.io/HomeElectric/home_electric_project/alquiler/update_rent/${rent_id}`
         console.log(url2);
         id_tool = "";
         var herramienta = $("#herramienta").val()
@@ -70,7 +70,7 @@ $(document).ready(function() {
         var usuario = window.localStorage.getItem('user_id');
         console.log(herramienta)
             
-        var url1 = `https://andresfdtc.github.io/HomeElectric/alquiler/tool_name/${herramienta}`
+        var url1 = `https://andresfdtc.github.io/HomeElectric/home_electric_project/alquiler/tool_name/${herramienta}`
 
         fetch(url1)
             .then(response => response.json()) 
@@ -116,7 +116,7 @@ $(document).ready(function() {
         console.log(urlViene2);
         var rent_id2 = urlViene.slice(3);
         console.log(rent_id2)
-        const url3 = `https://andresfdtc.github.io/HomeElectric/alquiler/delete_rent/${rent_id2}`
+        const url3 = `https://andresfdtc.github.io/HomeElectric/home_electric_project/alquiler/delete_rent/${rent_id2}`
         console.log(url3);        
         fetch(url3, {method: 'DELETE',})
             .then(response => console.log(response)) 
