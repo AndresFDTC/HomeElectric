@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Solicitud de datos p
     var user_id = window.localStorage.getItem('user_id');
-    var url1 = "http://localhost:8000/perfil/info_user/" + user_id
+    var url1 = "https://andresfdtc.github.io/HomeElectric/perfil/info_user/" + user_id
     fetch(url1)
         .then(response => response.json())
         .then(json => {
@@ -27,7 +27,7 @@ $(document).ready(function() {
         .catch(err => console.log(err))
 
     // Solicitud a la api que devuelve todos los alquileres del usuario
-    var url2 = `http://localhost:8000/alquiler/rents_user/${user_id}`
+    var url2 = `https://andresfdtc.github.io/HomeElectric/alquiler/rents_user/${user_id}`
     fetch(url2)
         .then(response => response.json()) 
         .then(json => {

@@ -6,7 +6,7 @@ $(document).ready(function() {
         console.log(nomUs);
         console.log("hola");
         
-        const url = "http://127.0.0.1:8000/perfil/login/"
+        const url = "https://andresfdtc.github.io/HomeElectric/perfil/login/"
 
         var data = {
             "username": nomUs,
@@ -27,7 +27,7 @@ $(document).ready(function() {
         .then(json => {
             console.log(json)
             // Solicitud para obtener el id y nombre del usuario para almacenarlo en el localstorage
-            fetch(`http://localhost:8000/perfil/username/${nomUs}`)
+            fetch(`https://andresfdtc.github.io/HomeElectric/perfil/username/${nomUs}`)
             .then(response => response.json()) 
             .then(json => {
                 console.log(json)
