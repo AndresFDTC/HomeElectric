@@ -5,7 +5,7 @@ $(document).ready(function() {
     console.log(urlViene);
     var id_rent = urlViene.slice(8);
 
-    var url = `https://andresfdtc.github.io/HomeElectric/home_electric_project/alquiler/retrieve_rent/${id_rent}`
+    var url = `https://homeelectricproject.herokuapp.com/alquiler/retrieve_rent/${id_rent}`
 
     fetch(url)
     .then(response => response.json())
@@ -15,7 +15,7 @@ $(document).ready(function() {
         var fInicio = json["inicio"]
         var fFin = json["fin"]
 
-        fetch("https://andresfdtc.github.io/HomeElectric/home_electric_project/alquiler/retrieve_tool/"+id_tool)
+        fetch("https://homeelectricproject.herokuapp.com/alquiler/retrieve_tool/"+id_tool)
         .then(response => response.json())
         .then(json => {
             console.log(json)

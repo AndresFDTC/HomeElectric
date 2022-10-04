@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Solicitud a la api que devuelve la info del usuario y la carga en el formulario
     var user_id = window.localStorage.getItem('user_id');
-    var url = `https://andresfdtc.github.io/HomeElectric/home_electric_project/perfil/info_user/${user_id}`
+    var url = `https://homeelectricproject.herokuapp.com/perfil/info_user/${user_id}`
     fetch(url)
         .then(response => response.json()) 
         .then(json => {
@@ -15,7 +15,7 @@ $(document).ready(function() {
         
     // Solicitud de actualización de los datos del usuario
     $("#update_user").click(function(){
-        var url3 = `https://andresfdtc.github.io/HomeElectric/home_electric_project/perfil/update_user/${user_id}`
+        var url3 = `https://homeelectricproject.herokuapp.com/perfil/update_user/${user_id}`
         console.log("hola");
         
         var nomUs = $("#username").val();
