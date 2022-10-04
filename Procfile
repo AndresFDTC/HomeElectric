@@ -1,1 +1,1 @@
-web: python manage.py runserver 0.0.0.0:$PORT
+web: gunicorn --pythonpath home_electric_project home_electric_project.wsgi --log-file -
