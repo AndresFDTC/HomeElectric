@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath home_electric_project home_electric_project.wsgi --log-file -
+web: gunicorn --pythonpath home_electric_project home_electric_project.wsgi --log-file - --log-level debug
