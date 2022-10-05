@@ -25,5 +25,4 @@ urlpatterns = [
     path('perfil/', include('perfil.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('alquiler/', include('alquiler.urls')),
-    path('', "../index.html")
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
